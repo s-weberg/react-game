@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import './App.css';
+import './components/game.css';
 
 
-import IAmBored from './components/game';
+
+import CatGame from './components/game';
 
 function App() {
   return (
     <div>
-      <IAmBored />
+      <CatGame />
     </div>
   );
 }
