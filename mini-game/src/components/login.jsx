@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import {useNavigate} from "react-router"  
+import './login.css';
 
 function logIn() {
 
@@ -11,6 +12,7 @@ function logIn() {
     };
     
      return (
+        <div className="login-box">
         <div className="login">
           <input
             type="email"
@@ -18,14 +20,19 @@ function logIn() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
           />
+          <div className="password">
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
           />
-          <button onClick={handleLogin}>Login</button>
+          
+          <button className="btn" onClick={handleLogin}>Login</button>
         </div>
+        </div>
+        </div>
+       
       );
     }
 
