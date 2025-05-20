@@ -37,3 +37,17 @@ body {
     background-color: rgb(243, 94, 35);
     color: black;
 }
+
+.signup-btn {
+    margin: 20px 0px 20px 0px;
+    background-color: black;
+    color: rgb(243, 94, 35); 
+    width: 600px;
+}
+
+.register-btn {
+     margin: 20px 0px 20px 0px;
+    background-color: black;
+    color: rgb(243, 94, 35);
+    width: 600px;
+}

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import {useNavigate} from "react-router";
 import './game.css';
+import './login.css';
 
 const fakeFacts = [
   "Cats can live underwater like fish.",
@@ -15,6 +17,7 @@ function CatGame() {
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
+  const navigate = useNavigate()
 
   const fetchTrueFact = async () => {
     try {
