@@ -11,17 +11,15 @@ import LogInRegistration from "./components/loginRegistration.jsx";
 
 
 function App() {
-
-
   return (
     <BrowserRouter>
-    <Routes>
-      
-        <Route path="/" element={<LogInRegistration/>} />
-        <Route path="/game" element={<Game/>} />
-        </Routes>
-        </BrowserRouter>
-  )
+      <Routes>
+        <Route path="/" element={<LogInRegistration />} />
+        <Route path="/game" element={<Game />} />
+     
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

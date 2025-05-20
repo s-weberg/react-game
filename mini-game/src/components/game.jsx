@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import {useNavigate} from "react-router";
+import {useNavigate} from "react-router-dom";
 import './game.css';
 import './login.css';
 
@@ -17,7 +17,10 @@ function CatGame() {
   const [score, setScore] = useState(0);
   const [feedback, setFeedback] = useState('');
   const [isAnswered, setIsAnswered] = useState(false);
+  const [questionCount, setQuestionCount] = useState(0);
   const navigate = useNavigate()
+
+  
 
   const fetchTrueFact = async () => {
     try {
@@ -39,7 +42,15 @@ function CatGame() {
       ? await fetchTrueFact()
       : fakeFacts[Math.floor(Math.random() * fakeFacts.length)];
     setFact(newFact);
+    setQuestionCount(prev => prev + 1);
+     if (questionCount >= 4) {
+      navigate('/result', { state: { finalScore: score } });
+    }
+
   };
+
+ 
+
 
   useEffect(() => {
     getRandomFact();
@@ -52,6 +63,11 @@ function CatGame() {
     setFeedback(isCorrect ? "Correct!" : `Wrong! This fact is ${isTrue ? "true" : "false"}.`);
     setIsAnswered(true);
   };
+
+    const handleGoBack = () => {
+    navigate('/');
+  };
+
 
   return (
     <div className="container">
@@ -81,9 +97,19 @@ function CatGame() {
             Next Fact
           </button>
         )}
+
+        <div>
+          <button className="go-back-btn"
+            onClick={handleGoBack}
+            
+          >
+            Return to Login
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
 
 export default CatGame;
