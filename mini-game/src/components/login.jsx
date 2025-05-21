@@ -6,7 +6,7 @@ import './registration.jsx';
 
 
 
-    function Login({ handleUser }) {
+    function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [feedback, setFeedback] = useState('');
@@ -32,6 +32,9 @@ import './registration.jsx';
     }
   };
       return (
+
+        
+        
     <div className="form-box">
       {feedback && (
         <p className={`text-center mb-4 ${feedback.includes('successful') ? 'text-green-500' : 'text-red-500'}`}>
@@ -59,18 +62,16 @@ import './registration.jsx';
         >
           Login
         </button>
-      </form>
+      
       <div>
-        <p>
+        <p className="account-exist">
           Don't have an account?{' '}
-          <button
-            className="signup-btn"
-            onClick={() => handleUser('register')}
-          >
-            Sign up
-          </button>
+          <button className="register-btn" onClick={() => { console.log('Navigating to /registration'); navigate('/registration'); }}>
+          Sign up
+        </button>
         </p>
       </div>
+      </form>
     </div>
   );
 }

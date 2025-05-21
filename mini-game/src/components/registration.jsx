@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './login.css';
 
 
-    function Registration({ handleUser }) {
+    function Registration() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [feedback, setFeedback] = useState('');
@@ -21,6 +21,7 @@ import './login.css';
 
     if (user.email === email) {
       setFeedback("You're already a gamer!");
+      navigate('/');
       return;
     }
 
@@ -69,7 +70,7 @@ import './login.css';
           Already a gamer?{' '}
           </p>
           <button className="login-btn"
-            onClick={() => handleUser('/')}>
+            onClick={() => navigate('/')}>
             Log in
           
         </button>

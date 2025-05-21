@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Login from "./login.jsx";
-import Registration from "./registration.jsx";
+import { Routes, Route } from 'react-router-dom';
+import Login from './login.jsx';
+import LoginRegistration from './loginRegistration.jsx';
+import Game from './game.jsx'; 
+import './login.css';
 
-function LoginRegistration() {
-  const [form, setForm] = useState('login');
-  const navigate = useNavigate();
-
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
-        <h2 className="text-xl font-bold mb-4 text-center">
-          {form === 'login' ? 'Log In' : 'Sign Up'}
-        </h2>
-        {form === 'login' ? (
-          <Login handleUser={setForm} navigate={navigate} />
-        ) : (
-          <Registration handleUser={setForm} navigate={navigate} />
-        )}
-      </div>
-    </div>
+    <Routes>
+   
+      <Route path="/" element={<LoginRegistration />} />
+      <Route path="/game" element={<Game />} />
+    </Routes>
   );
 }
 
-export default LoginRegistration;
+export default App;

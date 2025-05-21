@@ -1,22 +1,17 @@
-import React, { useState } from 'react';
-
-import {BrowserRouter, Routes, Route} from "react-router";
+import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom'; 
+import Login from './components/login.jsx'; 
+import Registration from './components/registration.jsx'; 
+import Game from './components/game.jsx'; 
 import './components/game.css';
-
-import Game from "./components/game.jsx";
-import "./components/login.jsx";
-import "./components/registration.jsx";
-import LogInRegistration from "./components/loginRegistration.jsx";
-
-
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LogInRegistration />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/game" element={<Game />} />
-     
       </Routes>
     </BrowserRouter>
   );
