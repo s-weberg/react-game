@@ -1,0 +1,91 @@
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 350px;
+    background-color: rgb(243, 94, 35);
+    border: 2px solid black;
+  
+    
+}
+
+.login {
+    width: 150px;
+}
+
+.password {
+
+    width: 150px;
+    margin: 10px 0px 10px 0px;
+}
+
+.create-account {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    width: 250px;
+}
+
+.login-btn {
+    margin: 20px 0px 20px 0px;
+    background-color: black;
+    color: rgb(243, 94, 35);
+}
+
+.login-btn:hover {
+    background-color: rgb(243, 94, 35);
+    color: black;
+}
+
+
+.signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 30px;
+    margin: 20px 0px 20px 0px;
+    background-color: black;
+    color: rgb(243, 94, 35); 
+    
+}
+
+
+.register-btn {
+    margin: 20px 0px 20px 0px;
+    background-color: black;
+    color: rgb(243, 94, 35); 
+}
+
+.register-btn:hover {
+     background-color: rgb(243, 94, 35);
+     color: black;
+}
+
+.account-exist{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    width: 250px;
+    margin: 20px 0px 0px 0px;
+}
+
+
+
+.play-btn {
+    background-color: rgb(243, 94, 35);
+    color: black;
+    margin: 20px;
+}
+
+.play-btn:hover {
+     background-color: black;
+     opacity: 10px;
+    color: rgb(243, 94, 35);
+}
+
