@@ -34,15 +34,14 @@ import './login.css';
   };
 
     return (
-        <div>
-            <h2 className="signup-btn">Sign up</h2>
-             {feedback && (
-            <p className={`feedback ${feedback.includes('registered') }`}>
-            {feedback}
-          </p>
+        <div className="form-box">
+      {feedback && (
+        <p className={`text-center mb-4 ${feedback.includes('successful') ? 'text-green-500' : 'text-red-500'}`}>
+          {feedback}
+        </p>
         )}
-             <form onSubmit={handleReg}>
-          <div className="form-reg">
+             <form className="login" onSubmit={handleReg}>
+       
             <input
               type="email"
               name="email"
@@ -63,14 +62,14 @@ import './login.css';
             Register
             </button>
       
-       </div>
+     
        
         <div>
         <p className="account-exist">
-          Already have an account?{' '}
+          Already a gamer?{' '}
           </p>
-          <button className="login"
-            onClick={() => handleUser('/login')}>
+          <button className="login-btn"
+            onClick={() => handleUser('/')}>
             Log in
           
         </button>
@@ -78,15 +77,7 @@ import './login.css';
       </div>
       
 
-       <div>
-            Already a gamer?{' '}
-            
-              <p
-              onClick={() => handleUser('login')}>
-            </p>
-              Log in
-            
-          </div>
+       
            </form>
     </div>
   );

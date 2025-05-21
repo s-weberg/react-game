@@ -39,10 +39,11 @@ body {
     color: rgb(243, 94, 35);
 }
 
-.btn:hover {
+.login-btn:hover {
     background-color: rgb(243, 94, 35);
     color: black;
 }
+
 
 .signup-btn {
     display: flex;
@@ -59,11 +60,15 @@ body {
 .register-btn {
     margin: 20px 0px 20px 0px;
     background-color: black;
-    color: rgb(243, 94, 35);
-    width: 600px;
+    color: rgb(243, 94, 35); 
 }
 
+.register-btn:hover {
+     background-color: rgb(243, 94, 35);
+    color: black;
+}
 
+/*
 .form-reg {
     display: flex;
     flex-direction: column;
@@ -71,6 +76,27 @@ body {
     align-items: center;
     width: 450px;
     height: 350px;
+
     background-color: rgb(243, 94, 35);
     border: 2px solid black;
 }
+*/
+.account-exist{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    width: 250px;
+    margin: 20px 0px 0px 0px;
+}
+
+.play-btn {
+    background-color: rgb(243, 94, 35);
+    color: black;
+    margin: 20px;
+}
+
+.play-btn:hover {
+     background-color: black;
+     opacity: 10px;
+    color: rgb(243, 94, 35);
+}
+
